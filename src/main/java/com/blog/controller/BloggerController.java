@@ -34,9 +34,9 @@ public class BloggerController {
 			subject.login(token);
 			return "redirect:/admin/main.jsp";
 		}catch(Exception e) {
-//			e.printStackTrace();
+			e.printStackTrace();
 			request.setAttribute("blogger", blogger);
-			request.setAttribute("erroInfo", "用户名或密码错误！");
+			request.setAttribute("errorInfo", "用户名或密码错误！");
 		}
 		
 		return "login";
